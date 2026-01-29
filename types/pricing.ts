@@ -6,6 +6,6 @@ type PricingTable = {
 }
 
 
-type PricingConfig = PricingTable[]
+type PricingConfig = Record<string, PricingTable>
 
 export type { PricingTable, PricingConfig }

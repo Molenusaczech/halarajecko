@@ -1,18 +1,18 @@
 import { PricingConfig } from "@/types/pricing";
 
-let PRICING: PricingConfig = [
-    {
+let PRICING: PricingConfig = {
+    "velkysal": {
         name: "Velký sál",
         desc: ["sálová kopaná, košíková, aerobic, florbal, házená, nohejbal, volejbal, taneční sporty, kondiční cvičení"],
         header: [
-            "Délka pronájmu",
-            "Cena"
+            "",
+            "1 Hodina"
         ],
         rows: [
-            ["1 hodina", "600,-"]
+            ["Pronájem", "600,-"]
         ]
     },
-    {
+    "squash": {
         name: "Squash",
         desc: ["Maximální kapacita kurtu jsou 3 hráči"],
         header: [
@@ -26,7 +26,7 @@ let PRICING: PricingConfig = [
             ["Míček", "-", "10,-"]
         ]
     },
-    {
+    "badminton": {
         name: "Badminton",
         desc: [],
         header: [
@@ -36,7 +36,7 @@ let PRICING: PricingConfig = [
             ["Badminton", "240,-"]
         ]
     },
-    {
+    "tenis": {
         name: "Tenis",
         desc: [],
         header: [
@@ -46,4 +46,7 @@ let PRICING: PricingConfig = [
             ["Tenis", "600,-"]
         ]
     }
-]
+}
+
+export type PricingCategory = keyof typeof PRICING
+export default PRICING
