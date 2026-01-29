@@ -34,3 +34,5 @@ const NAVBAR: NavBarLink[] = [
         icon: (<Calendar1 />)
     }
 ]
+
+export default NAVBAR
