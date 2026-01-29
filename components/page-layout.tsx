@@ -28,17 +28,17 @@ export default function PageLayout({ children }: PageLayoutProps) {
       {/* Navigation */}
       <nav className="bg-gray-900 text-white sticky top-0 z-50">
         <div className="max-w-7xl mx-auto px-4">
-          <div className="flex flex-wrap items-center justify-start gap-1 py-0">
+          <div className="flex flex-col sm:flex-row flex-wrap items-stretch sm:items-center justify-start gap-0 sm:gap-1 py-0">
             {NAVBAR.map((item) => (
               <Link
                 key={item.href}
                 href={item.href}
                 target={item.isExternal ? '_blank' : undefined}
                 rel={item.isExternal ? 'noopener noreferrer' : undefined}
-                className="flex items-center gap-2 px-4 py-3 hover:bg-gray-800 transition-colors rounded-md"
+                className="flex items-center gap-2 px-4 py-3 hover:bg-gray-800 transition-colors rounded-none sm:rounded-md w-full sm:w-auto border-b sm:border-b-0 border-gray-800 last:border-b-0 sm:last:border-b-0"
               >
                 <span className="flex items-center">{item.icon}</span>
-                <span className="hidden sm:inline">{item.name}</span>
+                <span>{item.name}</span>
               </Link>
             ))}
           </div>
@@ -46,7 +46,7 @@ export default function PageLayout({ children }: PageLayoutProps) {
       </nav>
 
       {/* Main Content Wrapper */}
-      <div className="flex flex-1">
+      <div className="flex flex-col md:flex-row flex-1">
         {/* Main Content Area */}
         <main className="flex-1 p-4 md:p-8">
           <div className="max-w-4xl mx-auto">
@@ -55,8 +55,8 @@ export default function PageLayout({ children }: PageLayoutProps) {
         </main>
 
         {/* Contact Info Sidebar */}
-        <aside className="w-full md:w-80 bg-gray-50 border-l border-gray-200 p-6 md:p-8 overflow-y-auto">
-          <div className="sticky top-20">
+        <aside className="w-full md:w-80 bg-gray-50 border-t md:border-t-0 md:border-l border-gray-200 p-6 md:p-8">
+          <div>
             <h2 className="text-2xl font-bold text-gray-900 mb-6">Kontakt</h2>
             
             {/* Address */}
