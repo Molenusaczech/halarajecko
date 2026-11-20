@@ -30,8 +30,14 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+        <div
+          role="status"
+          className="bg-amber-100 px-4 py-3 text-center text-sm font-medium text-amber-950"
+        >
+          Tato stránka je momentálně ve vývoji.
+        </div>
         <PageLayout>
-        {children}
+          {children}
         </PageLayout>
       </body>
     </html>
