@@ -17,13 +17,12 @@ let PRICING: PricingConfig = {
         desc: ["Maximální kapacita kurtu jsou 3 hráči"],
         header: [
             "",
-            "30 minut",
             "1 hodina"
         ],
         rows: [
-            ["Pronájem kurtu", "120,-", "240,-"],
-            ["Raketa", "-", "30,-"],
-            ["Míček", "-", "10,-"]
+            ["Pronájem kurtu", "240,-"],
+            ["Raketa", "30,-"],
+            ["Míček", "10,-"]
         ]
     },
     "badminton": {
@@ -33,7 +32,7 @@ let PRICING: PricingConfig = {
             "", "1 hodina"
         ],
         rows: [
-            ["Badminton", "240,-"]
+            ["Badminton (1 kurt)", "240,-"]
         ]
     },
     "tenis": {
